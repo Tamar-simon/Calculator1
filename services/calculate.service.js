@@ -1,12 +1,21 @@
 
-// opertations list the key is the operator and the value is the result function. 
-OPERATIONS = {
-    "addition": (n1,n2) => { return n1 + n2},
-    "subtraction": (n1,n2) => { return n1 - n2},
-    "multiply": (n1,n2) => { return n1 * n2},
-    "division": (n1,n2) => { return n1 / n2},
+
+var DynamicClass = require('../classes/dynamic.class');
+var insatncesOperator = {"Addition":null ,"Subtraction":null, "Multiply":null,"Division":null};
+
+// arg  - operator like Addition/Subtraction/Multiply/Division
+// this function get opertator and create new instace operator according to argumnet (singelton)
+getOperatorInstance = (operator) => {
+    if(insatncesOperator[operator])
+       return insatncesOperator[operator];
+    else
+   {
+    insatncesOperator[operator] = new DynamicClass(`${operator}Class`);
+    return insatncesOperator[operator];        
+   }
+
 }
 
 module.exports = {
-    OPERATIONS: OPERATIONS
+    getOperatorInstance: getOperatorInstance
 }
