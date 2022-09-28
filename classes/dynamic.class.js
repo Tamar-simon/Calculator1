@@ -7,12 +7,16 @@ var DivisionClass = require('../../Calculator/classes/division.class');
 var SubtractionClass = require('../../Calculator/classes/subtraction.class');
 var MultiplyClass = require('../../Calculator/classes/multiply.class');
 var AdditionClass = require('../../Calculator/classes/addition.class');
+var ResultNumberClass = require('../../Calculator/results/resultNumber.class');
+var ResultColorClass = require('../../Calculator/results/resultColor.class');
 
 const classes = {
     AdditionClass,
     SubtractionClass,
     MultiplyClass,
-    DivisionClass
+    DivisionClass,
+    ResultNumberClass,
+    ResultColorClass
 };
 
 // Use ES6 Object Literal Property Value Shorthand to maintain a map
