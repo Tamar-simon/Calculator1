@@ -9,7 +9,7 @@ class ResultColor {
         console.log("ResultColorClass");
     }
     result(number) {
-        return { result: number, color: 'red' }
+        return { result: number, color: number%2==0?'green':'red' }
     }
 
 }
